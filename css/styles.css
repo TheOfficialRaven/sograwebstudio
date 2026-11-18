@@ -88,6 +88,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .logo-placeholder {
@@ -100,7 +101,9 @@ img {
 }
 
 .logo picture {
-  display: block;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   line-height: 0;
   animation: fade-in 0.8s var(--ease-out) both;
 }
@@ -110,6 +113,7 @@ img {
   width: clamp(12rem, 38vw, 20rem);
   height: auto;
   max-width: 100%;
+  margin-inline: auto;
   image-rendering: auto;
 }
 
@@ -545,19 +549,72 @@ img {
 
 @media (max-width: 767px) {
   .page {
-    width: min(100% - 1.5rem, 56rem);
-    padding-block: 1.75rem 2.5rem;
+    width: min(100% - 1.75rem, 56rem);
+    padding-block: 2rem 3rem;
     justify-content: flex-start;
     min-height: auto;
-    gap: 0.7rem;
+    gap: 1.25rem;
   }
 
   .logo-wrap {
-    margin-bottom: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .logo,
+  .logo picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-image {
+    width: min(72vw, 14.5rem);
+    margin-inline: auto;
+  }
+
+  .hero {
+    gap: 1.1rem;
   }
 
   .title-block {
-    padding-inline: 0.75rem;
+    padding-inline: 0.35rem;
+  }
+
+  #page-title {
+    font-size: clamp(1.3rem, 6.2vw, 1.7rem);
+    line-height: 1.28;
+  }
+
+  .description {
+    max-width: 22rem;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    padding-inline: 0.25rem;
+  }
+
+  .thanks {
+    margin-top: 0.35rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .contact {
+    margin-top: 0.35rem;
+    gap: 0.9rem;
+    width: 100%;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 20rem);
+    gap: 0.65rem;
+  }
+
+  .contact-link {
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
   }
 
   .accent--teal {
